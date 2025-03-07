@@ -1,3 +1,9 @@
+@import url('./css_modules/variables.css');
+
+@font-face {
+  font-family: 'Times New Roman', Times, serif;
+  src: url();
+}
 
 body {
   background-color: #005353;
@@ -14,29 +20,40 @@ body {
 display: flex;
 justify-content: space-between;
 width: 50%;
-& > p {
-  font-size: 14px;
-  color: white;
-  &:hover {
-    color: #06f0f0;
-    }
-  }
 }
+
+#nav-links > p {
+font-size: var(--font-size);
+color: var(--font-color);
+}
+
+#nav-links > p:hover {
+  color: var(--textColor-hover);
+}
+
+#hero h1 {
+  width: 65%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 50px;
+  font-size: var(--font-hero_h1);
+}}
+
 
 .button {
   height: 2.5em;
   width: 10em;
-  color: white;
+  color: var(--font-color);
   font-size: .9em;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: var(--borderRadius-btn);
   border-color: transparent;
   border-width: 0px;
-  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to right, #FF964A, #FF2E00);
-  &:hover {
-    background: #FF2E00;
-  }
+  box-shadow: var(--box-shadow);
+  background: var(--button-bg);
+}
 
+.button:hover {
+  background: var(--btn-hover);
 }
 
 } /* End of media query for NavBar mobile */
