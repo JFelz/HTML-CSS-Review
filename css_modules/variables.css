@@ -1,0 +1,18 @@
+:root {
+  /* Font */
+  --font-size: 14px;
+  --font-hero_h1: 3em;
+  /*--------------*/
+
+  /* Color */
+  --font-color: #FFFFFF;
+  --button-bg: linear-gradient(to right, #FF964A, #FF2E00);
+  --textColor-hover: #FF964A;
+  --btn-hover: #FF2E00;
+  /*--------------*/
+
+    /* Box Model */
+  --box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  --borderRadius-btn: 7px 7px 7px 7px;
+  /*--------------*/
+}
