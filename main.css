@@ -1,0 +1,79 @@
+
+body {
+  background-color: #005353;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 375px) {
+#nav-links {
+display: flex;
+justify-content: space-between;
+width: 50%;
+& > p {
+  font-size: 14px;
+  color: white;
+  &:hover {
+    color: #06f0f0;
+    }
+  }
+}
+
+.button {
+  height: 2.5em;
+  width: 10em;
+  color: white;
+  font-size: .9em;
+  border-radius: 7px 7px 7px 7px;
+  border-color: transparent;
+  border-width: 0px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #FF964A, #FF2E00);
+  &:hover {
+    background: #FF2E00;
+  }
+
+}
+
+} /* End of media query for NavBar mobile */
+
+/*Start of media query for Navbar Desktop*/
+@media (min-width: 1024px) {
+  #nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: .5em;
+  margin: .5em;
+  border-width: 5px;
+  border: dashed;
+  width: 50%;
+  & > p {
+    font-size: 14px;
+    color: white;
+    &:hover {
+      color: #06f0f0;
+      }
+    }
+  }
+  
+  .button {
+    height: 2.5em;
+    width: 10em;
+    color: white;
+    font-size: .9em;
+    border-radius: 7px 7px 7px 7px;
+    border-color: transparent;
+    border-width: 0px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #FF964A, #FF2E00);
+    &:hover {
+      background: #FF2E00;
+    }
+  
+  }
+  
+  } /* End of media query for NavBar Desktop*/
