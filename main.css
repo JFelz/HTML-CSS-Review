@@ -1,7 +1,8 @@
 @import url('./css_modules/variables.css');
 
 body {
-  background-color: #005353;
+  background-color: #202020;
+  color: white;
 }
 
 #navbar {
@@ -27,14 +28,6 @@ color: var(--font-color);
   color: var(--textColor-hover);
 }
 
-#hero h1 {
-  width: 65%;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 50px;
-  font-size: var(--font-hero_h1);
-}}
-
 
 .button {
   height: 2.5em;
@@ -51,7 +44,7 @@ color: var(--font-color);
 .button:hover {
   background: var(--btn-hover);
 }
- /* End of media query for NavBar mobile */
+}/* End of media query for NavBar mobile */
 
 /*Start of media query for Navbar Desktop*/
 @media (min-width: 1024px) {
@@ -59,24 +52,54 @@ color: var(--font-color);
 #grid-container {
 display: grid;
 grid-gap: 20px;
-height: 35vh;
+margin: 20px;
 border: 5px solid #ff3300;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: [sidebar1-start sidebar1] .5fr 
+[sidebar1-end content-start] 1.5fr 
+[content-end sidebar2-start] .5fr
+[sidebar2 sidebar2-end];
+grid-template-rows: [content-top] repeat(3, 150px) [content-bottom];
+grid-template-areas: 
+  "sidebar1 content sidebar2"
+  "sidebar1 content sidebar2"
+  "footer   footer  footer"  
 }
-
-/*
-grid-template-columns: 2.5fr 1fr;
-grid-template-rows: 2fr 1fr;
-grid-auto-rows: 50px;
-*/
-
 .item {
-  background-color: #FF964A;
+  background-color: rgb(0, 183, 255);
 }
-.item2 {
+
+.extra {
+  grid-column: span sidebar1-start / content-end;
+}
+
+.sidebar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: sidebar1;
+}
+
+.content {
+  grid-area: content;
   background-color: #FF2E00;
-  grid-column: span 3;
 }
+
+.sidebar2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: sidebar2;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  background-color: purple;
+}
+
+
 
 
 
@@ -112,5 +135,5 @@ grid-auto-rows: 50px;
     }
   
   }
-  
-  } /* End of media query for NavBar Desktop*/
+
+} /* End of media query for NavBar Desktop*/
